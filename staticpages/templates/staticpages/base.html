@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jelly Power</title>
+    <!-- 폰트--->
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            font-family: Calibri, sans-serif;
+        }
+
+        .page_header{
+            padding: 0px 20px 0px 20px;
+            border-bottom: #a0a0a0 solid 1px;
+        }
+        .page_logo {
+            display: inline-block;
+            font-family: "Arial Rounded", sans-serif;
+            font-style: italic;
+            font-weight: bolder;
+        }
+
+        .page_logo_hy{
+            text-decoration: none;
+            color: black;
+        }
+
+        .navigator{
+            display: inline-block;
+            position: relative;
+            left: 20px;
+
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        .nav_li{
+            display: inline-block;
+            margin: 0px  50px 0px 50px;
+            color: black;
+            font-family: "Times New Roman",Times , Serif;
+            font-size: 18px;
+        }
+
+        a:link.nav_a, a:visited.nav_a{
+            text-decoration: none ;
+            color:black;
+        }
+        a:hover.nav_a, a:active.nav_a{
+            text-decoration: underline ;
+            color:black;
+        }
+
+        .page_footer{
+            background-color: #a5a5a5;
+            padding: 40px 0px 40px 0px;
+        }
+        .copyright{
+            text-align: center;
+            font-family: "Times New Roman",Times , Serif;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="page_header">
+    <a class="page_logo_hy" href="/"><h1 class="page_logo">Jelly Power</h1></a>
+
+    <div class="navigator">
+
+<ul>
+    <li class="nav_li"><div><a class="nav_a" href="/about">about</a></div></li>
+    <li class="nav_li"><div><a class="nav_a" href="/news">news</a></div></li>
+    <li class="nav_li"><div><a class="nav_a" href="/shop">shop</a></div></li>
+    <li class="nav_li"><div><a class="nav_a" href="/contact">contact</a></div></li>
+    <li class="nav_li"><div><a class="nav_a" href="/mypage">mypage</a></div></li>
+</ul>
+    </div>
+</div>
+
+
+
+
+
+    <div class="content_container">
+        <div class="row">
+            <div >
+
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+        </div>
+
+<div class="page_footer">
+    <div class="copyright">Copyright ⓒ 2018 Jelly Power All rights reserved.</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+{% extends 'staticpages/base.html' %}
+
+
+{% block content %}
+
+<style>
+    .news-list{
+        list-style-type: none;
+        overflow: hidden;
+    }
+    .news-item{
+        float: left;
+        margin: 20px 30px 20px 30px;
+        text-align: center;
+    }
+        .news-title{
+        width: 250px;
+        height: 20px;
+    }
+
+    .news-item a:link, .news-item a:visited, .shop-item a:link, .shop-item a:visited{
+        color: black;
+        text-decoration: none;
+    }
+
+    .news-item a:active, .news-item a:hover, .shop-item a:active, .shop-item a:hover{
+        color: black;
+        text-decoration: underline;
+    }
+</style>
+
+<div>
+    <p>what's new</p>
+    <div>
+        <div>화살표</div>
+        <div>
+            <div>사진</div>
+            <div>뉴스 글</div>
+        </div>
+        <div>화살표</div>
+    </div>
+</div>
+
+    <div class="news-highlight" style="display: table; margin-left: auto; margin-right: auto;">
+    <div class="main-shortcut"><a href=""><h2>What's New</h2></a></div>
+    <ul class="news-list" >
+        <li class="news-item"><a href="">
+            <img class="news-thumbnail" width=250px height=250px src="http://thumbnail.egloos.net/600x0/http://pds21.egloos.com/pds/201210/10/68/f0163868_507576441e014.jpg">
+            <p><span class="news-title">hihi news1</span></p></a></li>
+
+        <li class="news-item"><a href="">
+            <img class="news-thumbnail" width=250px height=250px src="http://thumbnail.egloos.net/600x0/http://pds21.egloos.com/pds/201210/10/68/f0163868_507576441e014.jpg">
+            <p><span class="news-title">hihi news2</span></p></a></li>
+
+        <li class="news-item"><a href="">
+            <img class="news-thumbnail" width=250px height=250px src="http://thumbnail.egloos.net/600x0/http://pds21.egloos.com/pds/201210/10/68/f0163868_507576441e014.jpg">
+            <p><span class="news-title">hihi news3</span></p></a></li>
+    </ul>
+
+</div>
+
+<div></div>
+
+
+<!--
+<style>
+    .news-thumbnail{
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+    }
+
+    .news-item{
+        float:left;
+        margin: 40px;
+    }
+
+    .news-list{
+        display: inline-block; width:90%; margin: 0 auto;
+    }
+</style>
+
+<div style="list-style: none; display: table; margin-left: auto; margin-right: auto;text-align: center">
+    {% if news_list %}
+
+          <ul class="news-list">
+              {% for news in news_list %}
+
+
+        <li class="news-item" style ="height: 400px;">
+        <div class="news-thumbnail"><a href="{{ news.news_id }}/"><img src="{{news.news_thumbnail}}" width ="300" height="300"></a></div>
+        <div>
+            <a href="{% url 'news:news_views' news.news_id %}"><span class="news-title">{{news.news_title}}</span></a>
+            <p><span class="news-summary">{{news.news_text}}</span></p>
+        </div>
+    </li>
+              {% endfor %}
+          </ul>
+      {% else %}
+          <p>No Data.</p>
+
+    {% endif %}
+
+</div>
+
+-->
+{% endblock %}
